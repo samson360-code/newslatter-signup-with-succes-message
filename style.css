@@ -1,0 +1,146 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--Dark-Slate-Grey);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    /* display: none; */
+    justify-content: center;
+    background-color: white;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin-block: 1rem;
+}
+
+figure>img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#desktop {
+    display: none;
+}
+
+.text {
+    padding: 2em 1rem;
+}
+
+.list img {
+    padding-right: 0.5rem;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.text input,
+.text button {
+    font-size: 1.2rem;
+    margin-block: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: 0;
+    outline: 0.5px solid var(--Grey);
+}
+
+button {
+    background-color: var(--Dark-Slate-Grey);
+    color: white;
+}
+
+.succes {
+    height: 100%;
+    padding: 2rem;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    transition: all 1s linear;
+}
+
+.succes button {
+    justify-self: flex-end !important;
+    align-self: flex-end;
+    width: 100%;
+    padding: 0.8rem;
+    border: 0;
+    border-radius: 0.4rem
+}
+
+button:hover {
+    background: linear-gradient(to right, hsl(4, 100%, 67%), hsl(4, 100%, 68%));
+
+}
+
+.eror {
+    /* color: red; */
+    border: 1px solid red!important;
+}
+
+.error {
+    margin: 0;
+    color: red!important;
+    height: 1rem;
+    font-size: 0.8rem;
+}
+
+@media (min-width:700px) {
+    main {
+        width: 52rem;
+        flex-direction: row;
+        padding: 1rem;
+        border-radius: 2rem;
+        gap: 0.5rem;
+    }
+
+    .text {
+        padding: 2rem;
+    }
+
+    .succes {
+        width: 22rem;
+        border-radius: 2rem;
+        height: auto;
+    }
+
+    #desktop {
+        display: flex;
+    }
+
+    #mobile {
+        display: none;
+    }
+    .dimiss{
+        margin-top: auto;
+    }
+}
